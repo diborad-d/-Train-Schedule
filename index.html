@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Moment.js Reference -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/6.6.2/firebase-app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -17,8 +18,11 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <title>Train Schedule</title>
   </head>
   <body>
@@ -27,16 +31,39 @@
       <div class="card-body">
         <div class="container-fluid">
           <label class="departure">Where from?</label>
-          <input class="input-control" type="text" placeholder="departure station" />
+          <input class="input-control" id="departure" type="text" placeholder="departure station" />
           <label class="arrival">Where to?</label>
-          <input class="input-control" type="text" placeholder="arrival station" />
+          <input class="input-control" id="arrival" type="text" placeholder="arrival station" />
         </div>
-        <div class="times">
+        <div class="time">
+          Choose Date:
           <input type="date" id="date" />
+          <lable type="text-center"></lable>
           <input type="time" id="time" />
         </div>
-        <a href="#" class="btn btn-primary" id="submit">Go!</a>
+        <a href="#" class="btn btn-warning" id="submit">Let's go!</a>
       </div>
     </div>
+    <div class="card">
+      <div class="card-header" type="text-center">
+        My Ticket
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col">
+              <label type="text">From</label>
+              <input type="text" class="form-control" placeholder="station" />
+            </div>
+            <div class="col">
+              <label type="text">To</label>
+              <input type="text" class="form-control" type="text" placeholder="station" />
+            </div>
+          </div>
+        </form>
+        <a href="#" class="btn btn-warning" id="submit">Go somewhere</a>
+      </div>
+    </div>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>

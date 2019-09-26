@@ -1,4 +1,26 @@
-.card{
-    border-radius: 15px;
-    border: 80%;
+body{
+    background:black;
+}
+.card-body{
+    border: gray 1px;
+    background: linear-gradient(#6f9ebf,#065e9c );
+    border-radius: 40px;
+    margin: 5% 10%;
+    height: 350px;  
+}
+label.departure,
+label.arrival
+{
+    padding-left: 50px;
+}
+.container-fluid{
+    padding: 30px 30px;
+}
+#stations{
+   margin: 20px 20px;
+}
+#submit{
+    margin: 20px 20px;
+
+
 }
