@@ -1,4 +1,12 @@
-// Or with jQuery
+// $(document).ready(function() {
+//   let trainScheduleData = new Firebase("https://train-schedule-34437.firebaseio.com/");
+//   $("addDataBtn").on("click", function(event) {
+//     event.preventDefault();
+//     let trainName = $('')
+//     });
+
+// });
+
 const firebaseConfig = {
   apiKey: "AIzaSyB6UPhytJViM7sRJ-l0o9oJVNwmw497pqo",
   authDomain: "train-schedule-34437.firebaseapp.com",
@@ -11,9 +19,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let database = firebase.database();
-var ref = firebase.database().ref();                           
-ref.on("value", function(snapshot){
-    output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
+var ref = firebase.database().ref();
+ref.on("value", function(snapshot) {
+  output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
 });
 // $(document).ready(function() {
 //   let trainSchedue = {
@@ -26,13 +34,13 @@ ref.on("value", function(snapshot){
 //     leaving: 0
 //   };
 
-//   $(document).on("click", function() {
-//       let arrival = $("#arrival").val().trim();
-//       let departure = $("#departure").val().trim();
-//       trainSchedue.arrival = arrival;
-//       trainSchedue.departure = departure;
-//     database.ref().push({
-//       trainSchedue
-//     });
-//   });
-// });
+  $(document).on("click", function() {
+      let arrival = $("#arrival").val().trim();
+      let departure = $("#departure").val().trim();
+      trainSchedue.arrival = arrival;
+      trainSchedue.departure = departure;
+    database.ref().push({
+      trainSchedue
+    });
+  });
+
