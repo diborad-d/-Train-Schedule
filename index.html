@@ -29,7 +29,9 @@
     <div class="card">
       <div class="card-header"><h1>Austin Train Schedule</h1></div>
       <div class="card-body">
+          <h4>Let's Explore Austin!</h4>
         <div class="container-fluid">
+          
           <label class="departure">Where from?</label>
           <input class="input-control" id="departure" type="text" placeholder="departure station" />
           <label class="arrival">Where to?</label>
@@ -44,12 +46,12 @@
         <a href="#" class="btn btn-warning" id="submit">Let's go!</a>
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="card2">
       <div class="card-header" type="text-center">
-        My Ticket
+        <h3>Tickets</h3>
       </div>
-      <div class="card-body">
-        <form>
+      <!-- <div class="card-body"> -->
+      <!-- <form>
           <div class="row">
             <div class="col">
               <label type="text">From</label>
@@ -60,10 +62,23 @@
               <input type="text" class="form-control" type="text" placeholder="station" />
             </div>
           </div>
-        </form>
-        <a href="#" class="btn btn-warning" id="submit">Go somewhere</a>
-      </div>
+        </form> -->
+      <table class="table responsive-table table-hover table-secondary">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency(min)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <a href="#" class="btn btn-warning" id="goSomehwere">Go somewhere</a>
+      <!-- </div> -->
     </div>
+    <footer>ati &copy; 2019</footer>
     <script src="assets/javascript/app.js"></script>
   </body>
 </html>
