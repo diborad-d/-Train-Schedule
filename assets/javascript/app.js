@@ -1,4 +1,10 @@
-console.log(momemnt());
+const moment = require("moment");
+// console.log(moment());
+//current date + time
+let m = moment();
+// console.log("m: " + m.toDate());
+console.log(`toISOString() => ${m.toISOString()}`);
+
 //  $(document).ready(function() {
 //   let trainScheduleData = new Firebase("https://train-schedule-34437.firebaseio.com/");
 //   $("addDataBtn").on("click", function(event) {
