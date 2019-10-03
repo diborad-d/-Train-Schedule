@@ -1,11 +1,14 @@
-body {
+body 
+{
   background: url("../images/train.jpeg");
-  background-color: #cccccc;
+  background-color:cornflowerblue;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%, 50%;
-  image-rendering: auto;
+  image-rendering: auto; 
   height: auto;
+  /* background-color:linear-gradient(#6f9ebf, #065e9c); */
+
 }
 .card {
   width: 850px;
@@ -22,6 +25,9 @@ body {
   margin: 5% 10%;
   height: 350px;
   padding-top: 10px;
+}
+#card2{
+  height: 400px;
 }
 .container-fluid {
   padding-top: 50px;

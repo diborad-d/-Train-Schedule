@@ -12,59 +12,48 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    
-
-    <!-- <script src="node_modules/require/"></script> -->
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <!-- Initialize Firebase -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
-
-    <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <title>Train Schedule</title>
   </head>
   <body>
     <div class="card">
-      <div class="card-header"><h1>Austin Train Inquiries</h1></div>
+      <div class="card-header"><h1>Train Inquiries</h1></div>
       <div class="card-body">
-          <h4>Let's Explore Austin!</h4>
-        <div class="container-fluid">
-          
-          <label class="departure">Where from?</label>
-          <input class="input-control" id="departure" type="text" placeholder="departure station" />
-          <label class="arrival">Where to?</label>
-          <input class="input-control" id="arrival" type="text" placeholder="arrival station" />
-        </div>
-        <div class="time">
-          Choose Date:
-          <input type="date" id="date" />
-          <lable type="text-center"></lable>
-          <input type="time" id="time" />
-        </div>
-        <a href="#" class="btn btn-warning" id="submit">Let's go!</a>
-      </div>
+          <div class="panel-body">
+              <!--Train entry form-->
+               <form id="main-form">
+                 <div class="form-group">
+                  <label for="">Train Name</label>
+                  <input type="text" class="input-control" id="trainNameInput">
+                </div>
+                <div class="form-group">
+                  <label for="">Destination</label>
+                  <input type="text" class="input-control" id="destinationInput">
+                </div>
+                <div class="form-group">
+                  <label for="">First Train Time</label>
+                  <input type="text" class="input-control" id="firstTrainInput">
+                </div>
+                <div class="form-group">
+                  <label for="">Frequency (in Mins)</label>
+                  <input type="text" class="input-control" id="frequencyInput">
+                </div>
+                <div class="form-group">
+                    <label for="">	Minutes Away</label>
+                    <input type="text" class="input-control" id="arrivalInput">
+                  </div>
+           <button type="submit" class="btn btn-warning" id="addTrainBtn">Submit</button> 
+                </form> 
+             </div>
+            </div>
+     <!-- train board-->
     </div>
     <div class="card" id="card2">
       <div class="card-header" type="text-center">
-        <h3>Tickets</h3>
+        <h3>Train Schedule</h3>
       </div>
-      <!-- <div class="card-body"> -->
-      <!-- <form>
-          <div class="row">
-            <div class="col">
-              <label type="text">From</label>
-              <input type="text" class="form-control" placeholder="station" />
-            </div>
-            <div class="col">
-              <label type="text">To</label>
-              <input type="text" class="form-control" type="text" placeholder="station" />
-            </div>
-          </div>
-        </form> -->
     <div class="panel-primary">
       <table class="table table-hover table-secondary">
           <div class="row align-items-center">
@@ -72,54 +61,17 @@
           <tr>
             <th>Train Name</th>
             <th>Destination</th>
+            <th>First Train</th>
             <th>Frequency(min)</th>
-            <th>Next Arrival</th>
             <th>Minutes Away</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+        </tbody>
       </table>
     </div>
-   
-    	<!--Add train-->
-		<div class="panel panel-primary">
-        <div class="panel-heading" id="t2">
-          <h3 class="addTrainTitle"><strong>Add Train</strong></h3>
-        </div>
-		</div>
-        <div class="panel-body">
-        <!--Train entry form-->
-         <form id="main-form">
-           <!-- <div class="form-group">
-            <label for="">Train Name</label>
-            <input type="text" class="form-control" id="trainNameInput">
-          </div>
-  
-          <div class="form-group">
-            <label for="">Destination</label>
-            <input type="text" class="form-control" id="destinationInput">
-          </div>
-  
-          <div class="form-group">
-            <label for="">First Train Time (HH:mm - military time)</label>
-            <input type="text" class="form-control" id="firstTrainInput">
-          </div>
-  
-          <div class="form-group">
-            <label for="">Frequency (in Mins)</label>
-            <input type="text" class="form-control" id="frequencyInput">
-          </div>
-            
-            <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button> -->
-            <a href="#" class="btn btn-warning" id="goSomehwere">Go somewhere</a>
-          </form> 
-       </div>
-      </div>
-    <footer>ati &copy; 2019</footer>
-    <script src="node_modules/requirejs/require.js"></script>
-    <script src="node_modules/moment/moment.js"></script>
-
+    </div>
+    <footer>cti &copy; 2019</footer>
     <script src="assets/javascript/app.js"></script>
-    
   </body>
 </html>
